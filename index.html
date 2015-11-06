@@ -5,5 +5,26 @@
         <script src="adamAs.js"></script>
     </head>
     <body>
+        <center>
+        <h1>___ Adam Asmaca ___</h1>
+        <h2>Seçilen Kelime: <span id="secilenKelimeGoster">Seçilen kelime</span></h2>
+        <script>document.getElementById("secilenKelimeGoster").innerHTML = secilenKelime</script>
+        <p id="harfTutucuGoster"></p>
+        <script>document.getElementById("harfTutucuGoster").innerHTML = harfTutucu.join('&nbsp');</script>
+        <p>
+            <form id="frm1">
+                <input type="text" name="girilenHarf" maxlength="1" autofocus/>
+            </form>
+            <button onclick="myFunction()">Harfi Sorgula</button>
+            <script>
+                function myFunction() {
+                var x = document.getElementById("frm1");
+                harfKontrol(x.elements[0].value);
+                x.elements[0].value = null;
+                x.elements[0].focus();
+                }          
+            </script>
+        </p>
+        </center>
     </body>
 </html>
